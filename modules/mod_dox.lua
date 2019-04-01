@@ -2,7 +2,7 @@ local http = require "net.http";
 local st = require "util.stanza";
 local base64 = require "util.encodings".base64;
 
-local url = "https://dns.google.com/dns-query"
+local url = module:get_option_string("dox_resolver_url", "https://dns.google.com/dns-query");
 
 local xmlns_push = "urn:xmpp:dox:0"
 
